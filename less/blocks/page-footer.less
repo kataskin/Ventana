@@ -1,0 +1,107 @@
+.page-footer {
+  height: 178px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #1a1818;
+  @media (min-height: 992px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+  }
+}
+
+.page-footer__wrapper {
+  width: 920px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.page-footer__nav {
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.page-footer__nav-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 38px;
+}
+
+.page-footer__nav-item:last-child {
+  margin-right: 0;
+}
+
+.page-footer__nav-link {
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.page-footer__social {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.page-footer__social-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+
+  outline: 2px solid red;
+}
+
+.page-footer__social-item:last-child {
+  margin-right: 0;
+}
+
+.page-footer__social-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  &--facebook {
+    background: url("../img/icons/icon-facebook.png");
+    background:
+      linear-gradient(transparent, transparent),
+      url("../img/icons/icon-facebook.svg");
+  }
+  &--twitter {
+    background: url("../img/icons/icon-twitter.png");
+    background:
+      linear-gradient(transparent, transparent),
+      url("../img/icons/icon-twitter.svg");
+  }
+  &--google-plus {
+    background: url("../img/icons/icon-google.png");
+    background:
+      linear-gradient(transparent, transparent),
+      url("../img/icons/icon-google.svg");
+  }
+  &--youtube {
+    background: url("../img/icons/icon-youtube.png");
+    background:
+      linear-gradient(transparent, transparent),
+      url("../img/icons/icon-youtube.svg");
+  }
+}
+
+.page-footer__copyright {
+  margin-top: 25px;
+  font-size: 10px;
+  line-height: 13px;
+  color: #636363;
+}
+
+.page-footer__copyright-link {
+  color: #636363;
+}
