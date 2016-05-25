@@ -1,11 +1,6 @@
 .main-content {
   position: relative;
   height: 440px;
-  background: url("../img/bg/bg1.jpg") bottom center no-repeat;
-  background-size: 1600px auto;
-  @media (min-width: 1601px) {
-    background-size: 100%;
-  }
   @media (min-height: 992px) {
     position: absolute;
     bottom: 178px;
@@ -15,16 +10,115 @@
     width: 100%;
     height: 100%;
   }
-
-  outline: 2px solid blue;
 }
 
-.main-content__bg-slider {
+.main-content__radio {
   display: none;
 }
 
-.main-content__bg-list {
-  display: none;
+.main-content__switch-points {
+  position: absolute;
+  bottom: 310px;
+  left: 50%;
+  z-index: 2;
+  margin-left: -25px;
+  width: 50px;
+  height: 10px;
+  font-size: 0;
+}
+
+.main-content__switch-point {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  background: url("../img/bg/switch-point.png") center -1px no-repeat;
+  background: #ffffff linear-gradient(transparent, transparent);
+  border-radius: 50%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.main-content__switch-point:hover,
+.main-content__switch-point:active {
+  cursor: pointer;
+}
+
+.main-content__radio--1:checked ~ .main-content__switch-points  .main-content__switch-point--1,
+.main-content__radio--2:checked ~ .main-content__switch-points  .main-content__switch-point--2,
+.main-content__radio--3:checked ~ .main-content__switch-points  .main-content__switch-point--3 {
+  background: url("../img/bg/switch-point-active.png") center -1px no-repeat;
+  background: #d3521c linear-gradient(transparent, transparent);
+  &:hover,
+  &:active {
+    cursor: default;
+  }
+}
+
+.main-content__bg-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.main-content__bg-slide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.main-content__bg-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  width: 1600px;
+  height: auto;
+  margin-left: -800px;
+  @media (min-width: 1600px) {
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.main-content__radio--1:checked ~ .main-content__bg-container .main-content__bg-slide--1,
+.main-content__radio--2:checked ~ .main-content__bg-container .main-content__bg-slide--2,
+.main-content__radio--3:checked ~ .main-content__bg-container .main-content__bg-slide--3 {
+  animation-name: slide-appear;
+  animation-duration: 1s;
+  opacity: 1;
+}
+
+@keyframes slide-appear {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.main-content__radio--1:not(:checked) ~ .main-content__bg-container .main-content__bg-slide--1,
+.main-content__radio--2:not(:checked) ~ .main-content__bg-container .main-content__bg-slide--2,
+.main-content__radio--3:not(:checked) ~ .main-content__bg-container .main-content__bg-slide--3 {
+  animation-name: slide-disappear;
+  animation-duration: 1s;
+  opacity: 0;
+}
+
+@keyframes slide-disappear {
+  0% {opacity: 1};
+  100% {opacity: 0;}
 }
 
 .main-content__info {
@@ -44,8 +138,6 @@
   width: 920px;
   margin: 0 auto;
   padding: 10px 20px;
-
-  outline: 2px solid yellow;
 }
 
 .main-content__info-title {
@@ -88,6 +180,10 @@
   line-height: 18px;
   color: #ffffff;
   text-transform: uppercase;
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 .main-content__link-forward {
@@ -101,5 +197,18 @@
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  background-color: #d3521c;
+  background: #d3521c;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  &:hover,
+  &:active {
+    animation-name: btn-hover;
+    animation-duration: 200ms;
+    background: #fd9d37;
+  }
+}
+
+@keyframes btn-hover {
+  0% {background-color: #d3521c;}
+  100% {background-color: #fd9d37;}
 }

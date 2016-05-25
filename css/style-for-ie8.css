@@ -1,0 +1,39 @@
+.page-header__step .page-header__step-number {
+  height: 58px;
+  background: transparent url("../img/bg/step-number-bg.png") center -1px no-repeat;
+}
+
+.page-header__step-link-sign-up {
+  height: 48px;
+  background: url("../img/bg/sign-up-bg.png") center -1px no-repeat;
+}
+
+.page-header__step-link-sign-up:hover,
+.page-header__step-link-sign-up:active {
+  background: url("../img/bg/sign-up-bg-hover.png") center -1px no-repeat;
+}
+
+.main-content__radio {
+  display: block;
+  width: 0;
+  height: 0;
+}
+
+.main-content__bg-container .main-content__bg-slide {
+  display: none;
+}
+
+.main-content__radio--1:checked ~ .main-content__bg-container .main-content__bg-slide--1,
+.main-content__radio--2:checked ~ .main-content__bg-container .main-content__bg-slide--2,
+.main-content__radio--3:checked ~ .main-content__bg-container .main-content__bg-slide--3 {
+  display: block;
+}
+
+.main-content__link-forward {
+  background: url("../img/bg/link-forward-bg.png") center -1px no-repeat;
+}
+
+.main-content__link-forward:hover,
+.main-content__link-forward:active {
+  background: url("../img/bg/link-forward-bg-hover.png") center -1px no-repeat;
+}

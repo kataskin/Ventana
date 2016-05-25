@@ -2,8 +2,6 @@
   height: 333px;
   padding: 20px 0;
   background-color: #ffffff;
-
-  outline: 2px solid red;
 }
 
 .page-header__wrapper {
@@ -13,15 +11,19 @@
   text-align: center;
 }
 
-.page-header__logo {
+.page-header__logo-link {
+  display: block;
   width: 89px;
-  height: 82px;
+  margin: 0 auto;
+}
+
+.page-header__ligo-img {
+  display: block;
 }
 
 .page-header__list1 {
   margin: 12px 0 0;
   text-transform: uppercase;
-  letter-spacing: 0;
   word-spacing: 1px;
 }
 
@@ -49,15 +51,13 @@
 
 .page-header__steps-promo {
   max-width: 920px;
-  margin: 24px auto 0;
+  margin: 25px auto 0;
 }
 
 .page-header__step {
   width: 445px;
   font-size: 0;
   text-align: left;
-
-  outline: 2px solid green;
 }
 
 .page-header__step--facebook {
@@ -73,12 +73,13 @@
   vertical-align: middle;
   width: 54px;
   height: 54px;
-  margin-right: 20px;
+  margin-right: 16px;
   font-size: 32px;
   line-height: 54px;
   color: #ffffff;
   text-align: center;
-  background-color: #d3521c;
+  background: #d3521c;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 50%;
 }
 
@@ -90,8 +91,6 @@
   line-height: 20px;
   color: #272525;
   font-weight: 400;
-
-  outline: 2px solid red;
 }
 
 .page-header__step-link-sign-up {
@@ -107,5 +106,18 @@
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  background-color: #d3521c;
+  background: #d3521c;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  &:hover,
+  &:active {
+    animation-name: btn-hover;
+    animation-duration: 200ms;
+    background: #fd9d37;
+  }
+}
+
+@keyframes btn-hover {
+  0% {background-color: #d3521c;}
+  100% {background-color: #fd9d37;}
 }

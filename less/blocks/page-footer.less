@@ -39,6 +39,10 @@
   line-height: 18px;
   color: #ffffff;
   text-transform: uppercase;
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 .page-footer__social {
@@ -54,8 +58,6 @@
   width: 32px;
   height: 32px;
   margin-right: 8px;
-
-  outline: 2px solid red;
 }
 
 .page-footer__social-item:last-child {
@@ -93,6 +95,17 @@
       linear-gradient(transparent, transparent),
       url("../img/icons/icon-youtube.svg");
   }
+  &:hover,
+  &:active {
+    animation-name: social-hover;
+    animation-duration: 300ms;
+    opacity: 0.8;
+  }
+}
+
+@keyframes social-hover {
+  0% {opacity: 1;}
+  100% {opacity: 0.8;}
 }
 
 .page-footer__copyright {
@@ -104,4 +117,8 @@
 
 .page-footer__copyright-link {
   color: #636363;
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
 }
