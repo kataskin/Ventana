@@ -1,10 +1,11 @@
 .page-header {
-  padding: 20px 0;
+  padding: 20px 0 10px;
   background-color: #ffffff;
-  @media @tablet-widths {
-    width: 100%;
+  @media @desktop {
     min-width: 960px;
+    width: 100%;
     height: 333px;
+    padding-bottom: 20px;
   }
 }
 
@@ -12,7 +13,7 @@
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
-  @media @tablet-widths {
+  @media @desktop {
     width: 920px;
   }
 }
@@ -20,6 +21,7 @@
 .page-header__logo-link {
   display: block;
   width: 89px;
+  height: 82px;
   margin: 0 auto;
 }
 
@@ -27,26 +29,31 @@
   display: block;
 }
 
-.page-header__list1 {
+.page-header__line1 {
   display: none;
-  margin: 12px 0 0;
+  margin: 18px 0 0;
   text-transform: uppercase;
-  word-spacing: 1px;
-  @media @tablet-widths {
+  @media @desktop {
     display: block;
     font-size: 16px;
     line-height: 20px;
     color: #000000;
+    letter-spacing: 0.5px;
   }
 }
 
-.page-header__list2 {
+.page-header__line2 {
   margin: 15px 0 0;
   font-size: 20px;
   line-height: 24px;
   color: #4b4b4b;
-  @media @tablet-widths {
+  @media @tablet {
     margin: 2px 0 0;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -2px;
+  }
+  @media @desktop {
     font-size: 75px;
     line-height: 75px;
     letter-spacing: -4px;
@@ -54,28 +61,38 @@
   }
 }
 
-.page-header__list3 {
+.page-header__line3 {
   margin: 9px 0 0;
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 34px;
   color: #d45520;
   letter-spacing: -1px;
   word-spacing: -1px;
-  @media @tablet-widths {
+  @media @tablet {
+    font-size: 55px;
+    line-height: 60px;
+  }
+  @media @desktop {
     font-size: 42px;
     line-height: 50px;
+    letter-spacing: -0.75px;
+    word-spacing: -1.5px;
   }
 }
 
-.page-header__list3-decoration {
+.page-header__line3-decoration {
   font-weight: 700;
 }
 
 .page-header__steps-promo {
-  margin: 25px auto 0;
-  @media @tablet-widths {
+  margin: 24px auto 0;
+  @media @tablet {
     width: auto;
-    max-width: 920px;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
   }
 }
 
@@ -84,23 +101,29 @@
   margin-bottom: 40px;
   font-size: 0;
   text-align: left;
-  @media @tablet-widths {
-    width: 445px;
+  @media @tablet {
+    @media @tablet-min {
+      float: none;
+      margin: 0 auto 20px;
+    }
+    width: 410px;
     margin-bottom: 0;
+  }
+  @media @desktop {
+    width: 445px;
   }
 }
 
 .page-header__step--facebook {
-  @media @tablet-widths {
+  @media @tablet {
     float: left;
   }
 }
 
 .page-header__step--sign-up {
-  margin-bottom: 20px;
-  @media @tablet-widths {
+  margin-bottom: 0;
+  @media @tablet {
     float: right;
-    margin-bottom: 0;
   }
 }
 
@@ -117,11 +140,14 @@
   background: #d3521c;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 50%;
-  @media @tablet-widths {
+  @media @tablet {
     position: static;
     display: inline-block;
     vertical-align: middle;
     margin-right: 16px;
+  }
+  @media @desktop {
+    margin-right: 20px;
   }
 }
 
@@ -134,10 +160,10 @@
   line-height: 26px;
   color: #272525;
   font-weight: 400;
-  @media @tablet-widths {
+  @media @tablet {
     display: inline-block;
     vertical-align: middle;
-    width: 190px;
+    width: 184px;
     min-height: 0;
     margin-left: 0;
     margin-bottom: 0;
@@ -147,7 +173,7 @@
 }
 
 .page-header__br {
-  @media @tablet-widths {
+  @media @tablet {
     display: none;
   }
 }
@@ -156,15 +182,18 @@
   width: 130px;
   text-align: left;
   margin-left: 74px;
-  @media @tablet-widths {
+  @media @tablet {
+    margin-left: 20px;
+  }
+  @media @desktop {
     margin-left: 0;
   }
 }
 
 .fb-like iframe {
-  transform: scale(2.1);
+  transform: scale(2.1) translateY(-5px);
   transform-origin: top left;
-  @media @tablet-widths {
+  @media @desktop {
     transform: none;
   }
 }
@@ -184,10 +213,13 @@
   background: #d3521c;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  @media @tablet-widths {
+  @media @tablet {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 51px;
+    margin-left: 20px;
+  }
+  @media @desktop {
+    margin-left: 57px;
   }
   &:hover,
   &:active {
