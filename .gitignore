@@ -5,3 +5,5 @@ Thumbs.db
 *.log
 *.psd
 *.ai
+css/style.css
+css/style.min.css

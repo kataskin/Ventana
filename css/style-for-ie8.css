@@ -1,3 +1,14 @@
+.page-header__logo-link {
+  box-sizing: border-box;
+  width: 89px;
+  padding-left: 89px;
+  background: url("../img/logo.png");
+}
+
+.page-header__logo-img-wrapper {
+  display: none;
+}
+
 .page-header__step .page-header__step-number {
   height: 58px;
   background: transparent url("../img/bg/step-number-bg.png") center -1px no-repeat;
